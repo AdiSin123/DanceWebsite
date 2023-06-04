@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Aditya Dance Academy
+    link(rel="stylesheet", href="/static/style.css")
+  body
+    nav#navbar
+      ul
+        li#logo
+          img(src="/static/img/logo.png")
+          | DDA 
+        li
+          a(href="/") Home
+        li
+          a(href="/") About
+        li
+          a(href="/contact") Contact Us
+        li
+          a(href="/") Services
+        li
+          a(href="/") Class Info
+    section#introSection
+      div Welcome to Durgapur Dance Academy
+      div.small Break A Leg
+    section.ContactUs(class=ContactUs)
+      h1 Contact Us
+      form.myForm(action="/contact", method="post")
+        input.myInput(type="text", name="name", placeholder="Enter your name..")
+        input.myInput(type="phone", name="phone", placeholder="Enter your phone..")
+        input.myInput(type="email", name="email", placeholder="Enter your email..")
+        button.btn(type="submit") Submit
+    if responseMessage
+      p.responseMessage #{responseMessage}
+</p>
+    footer#footer
+      | Copyright 2023 Durgapur Dance Academy | All Rights Reserved
